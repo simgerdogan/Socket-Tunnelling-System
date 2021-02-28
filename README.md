@@ -31,12 +31,14 @@ This system should be useful for:
 
 ## Process
 
-- The server has a predefined IP address and port number and is waiting for a client to connect.Basically clients are authenticated.
-- Control protocol includes: Starting a session, Generating Session key and IV (counter for counter mode), Getting file data (block count, etc.), Requesting a missing block, Ending a session
-- The transmission protocol is used to send and receive a particular block.
-- Each block must be encrypted separately using the session key.
-- A command line interface is provided for sending commands for the command protocol.
-- It can be assumed that the sender has a public key and is known to the clients. 
+It is a process on the client side that listens on one or more TCP / UDP ports according to the settings given by the user.
+The incoming connection can be encrypted or plain data.This process (socket tunnel client) must accept incoming communication and its data is encrypted using SSL / TLS. - even if they are already encrypted as a result of the protocol requirements.To achieve this, it generated your own private key and certificate pair using OpenSSL, which is available for free for Linux, Windows and Macs.
+
+In addition, a PEM (Privacy Enhanced Mail) file has been created, combining the newly created private key and certificate.
+The client application should then be able to encrypt any incoming data stream and pass it to the listening port of the socket tunnel server.
+
+Socket tunnel client / server pair can bypass any deep packet inspection routers by acting as an HTTPS connection.
+Therefore, if the socket tunnel server is set to listen on the HTTPS port 443 on an open Internet, the socket tunnel client should be able to transmit data and communicate with the server without any problems and firewall interruptions.On the server side, the socket tunnel server must listen on a specific port and transmit incoming data to a predefined local port or any third party service.
 
 
 ### [Back To The Top](#Software-Architecture-for-Natural-Disaster)
