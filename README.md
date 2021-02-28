@@ -1,5 +1,4 @@
 # Socket-Tunnelling-System
-# File-Server-with-Retransmission-Security
 
 >This is a ReadMe to understand project info.
 
