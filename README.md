@@ -21,7 +21,7 @@ This system should be useful for:
 (a) Encrypt unsecured protocols such as POP3, HTTP, and IMAP
 (b) bypassing firewalls and routers with deep packet inspection enabled.
 
-![](screenshots/socket tunnel process comunication.jpg)
+![ ](screenshots/socket tunnel process comunication.jpg)
 
 
 
