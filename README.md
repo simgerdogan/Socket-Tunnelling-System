@@ -20,6 +20,8 @@ This system should be useful for:
 (a) Encrypt unsecured protocols such as POP3, HTTP, and IMAP
 (b) bypassing firewalls and routers with deep packet inspection enabled.
 
+![ ](screenshots/socket%20tunnel%20architecture.jpg)
+
 ![ ](screenshots/socket%20tunnel%20process%20comunication.jpg)
 
 
@@ -48,8 +50,7 @@ Therefore, if the socket tunnel server is set to listen on the HTTPS port 443 on
 
 ## Techonologies & Languages
 
-- Jupyter Notebook ( which is a web-based interactive development environment for Jupyter notebooks, code, and data)
-- Python ( programming language )
+- Java ( programming language )
 
 
 ### [Back To The Top](#Software-Architecture-for-Natural-Disaster)
